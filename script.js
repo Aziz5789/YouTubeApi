@@ -1,6 +1,4 @@
 
-    document.cookie = 'cookie2=value2; SameSite=None; Secure';
- 
 $(document).ready(function(){
 
 
@@ -30,7 +28,7 @@ $(document).ready(function(){
                 video = `
                 
                 <iframe  width="420" height="315"
-                src="https://www.youtube.com/embed/${item.id.videoID}" frameborder="0" allowfullscreen"
+                src="https://www.youtube.com/embed/${item.id.videoId}" frameborder="0" allowfullscreen"
                  ></iframe> 
                 
                 `
