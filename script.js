@@ -11,8 +11,11 @@ $(document).ready(function(){
     
     $("#form").submit(function (event) {
         event.preventDefault()
+        $("#results").empty()
+        $("#videos").empty()
+
+
         alert("form is submitted")
-        $("#results").empty();
         var search1 = $("#search").val()
 
         videoSearch(API_KEY, search1, 10)
@@ -54,7 +57,7 @@ $(document).ready(function(){
 
     $('#results').on('click', 'tr', function() {
         $("#table").hide();
-        $("videos").empty();
+
         var vidID = $(this).closest('tr').attr('id');
         video = `
                 
