@@ -15,7 +15,6 @@ $(document).ready(function(){
         $("#videos").empty()
 
 
-        alert("form is submitted")
         var search1 = $("#search").val()
 
         videoSearch(API_KEY, search1, 10)
@@ -56,13 +55,13 @@ $(document).ready(function(){
     }
 
     $('#results').on('click', 'tr', function() {
-        $("#table").hide();
+        $("#videos").empty();
 
         var vidID = $(this).closest('tr').attr('id');
         video = `
                 
-                <iframe  width="420" height="315"
-                src="https://www.youtube.com/embed/${vidID}" frameborder="0" allowfullscreen"
+                <iframe  width="0" height="0"
+                src="https://www.youtube.com/embed/${vidID}?autoplay=1" allow="autoplay" frameborder="0" 
                  ></iframe> 
                 
                 `
