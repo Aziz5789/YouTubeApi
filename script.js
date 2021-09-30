@@ -33,7 +33,7 @@ $(document).ready(function(){
              data.items.forEach((item) => {
                      videoData = `
                     
-                    <tr id="${item.id.videoId}">
+                    <tr class="trow" id="${item.id.videoId}">
                     <td>
                     ${item.snippet.title}</td>
                     <td>
