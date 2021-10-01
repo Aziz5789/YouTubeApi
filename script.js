@@ -70,6 +70,22 @@ $(document).ready(function(){
        
     });
 
+    $('#results').on('vclick', 'tr', function() {
+        $("#videos").empty();
+
+        var vidID = $(this).closest('tr').attr('id');
+        video = `
+                
+                <iframe  width="0" height="0"
+                src="https://www.youtube.com/embed/${vidID}?autoplay=1" allow="autoplay" frameborder="0" 
+                 ></iframe> 
+                
+                `
+                $("#videos").append(video)
+
+       
+    });
+
     
 })
 
