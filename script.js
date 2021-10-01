@@ -54,9 +54,9 @@ $(document).ready(function(){
         
     }
 
-    $('#results').on('click', 'tr', function() {
+     /* $('#results').on('click', 'tr', function() {
         $("#videos").empty();
-
+        console.log(this)
         var vidID = $(this).closest('tr').attr('id');
         video = `
                 
@@ -68,13 +68,14 @@ $(document).ready(function(){
                 $("#videos").append(video)
 
        
-    });
+    }); */ 
 
-    $('#results').on('vclick', 'tr', function() {
-        $("#videos").empty();
-
-        var vidID = $(this).closest('tr').attr('id');
-        video = `
+     $("#results").each(function(){
+        $(this).on('click', 'tr', function() {
+            var vidID = $(this).closest('tr').attr('id');
+            $("#videos").empty();
+            console.log(vidID)
+            video = `
                 
                 <iframe  width="0" height="0"
                 src="https://www.youtube.com/embed/${vidID}?autoplay=1" allow="autoplay" frameborder="0" 
@@ -83,8 +84,9 @@ $(document).ready(function(){
                 `
                 $("#videos").append(video)
 
-       
-    });
+        });
+    }); 
+
 
     
 })
